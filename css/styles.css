@@ -91,12 +91,12 @@ html{
 }
 .hat {
     background-color: var(--footbcg-color);
+    text-align: center;
 }
 .hat-title {
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60/40);
-    text-align: center;
     color: var(--btnlet-color);
 }
 .request{
