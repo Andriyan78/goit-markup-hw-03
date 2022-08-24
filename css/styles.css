@@ -76,6 +76,9 @@ img{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--h-color);
+    display: flex;
+    outline: 1px solid blue;
+    
 }
 .site-nav .link.current{
     color: var(--btnbg-color);
@@ -204,11 +207,18 @@ img{
     border: none;
     border-radius: var(--btn-radius);
 }
+
 .buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    background-color: aqua;
+}
+.buttons>.item{
+    margin-right: 8px;
+}
+.buttons .item:last-child{
+    margin-right: 0px;
 }
 .projects{
     font-size: 16px;
