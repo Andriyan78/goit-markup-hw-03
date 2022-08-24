@@ -1,11 +1,3 @@
-html{
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
 :root{
     /* fonts */
     --main-font:
@@ -18,10 +10,14 @@ html{
     --color-text:#757575;
     --btnlet-color:#FFFFFF;
     --filter-color:#F5F4FA;
+    --border-header:#ECECEC;
+    --border-card-projects: #EEEEEE;
     /* bcg colors */
     --btnbg-color:#2196F3;
     --footbcg-color:#2F303A;
     /* Others */
+    --btn-radius: 4px;
+    --card-set-gap: 30px;
 }
 .page{
     background-color: var(--btnlet-color);
@@ -38,6 +34,16 @@ html{
 }
 .list{
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,p,ul{
+    margin: 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .container{
     width: 1220px;
@@ -89,6 +95,9 @@ html{
 .tele:focus {
     color: var(--btnbg-color);
 }
+.header{
+    border-bottom: 1px solid var(--border-header);
+}
 .hat {
     background-color: var(--footbcg-color);
     text-align: center;
@@ -108,7 +117,11 @@ html{
     background-color: var(--btnbg-color);
     color: var(--btnlet-color);
     cursor: pointer;
-    border-radius: 4px;
+    min-width: 160px;
+    padding: 10px 20px;
+    min-height: 30px;
+    /* width: 160px; */
+    border-radius: var(--btn-radius);
 }
 .title {
     font-weight: 700;
@@ -136,18 +149,48 @@ html{
     font-size: 14px;
     line-height: calc(24/14);
     letter-spacing: 0.03em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1*var(--card-set-gap));
+    margin-top: calc(-1*var(--card-set-gap));
+}
+.features>.item{
+    outline: 1px solid teal;
+    flex-basis: calc(100%/4-30px);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+}
+.do{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1*var(--card-set-gap));
+    margin-top: calc(-1*var(--card-set-gap));
+}
+.do>.item{
+    outline: 1px solid teal;
+    flex-basis: calc(100%/3-30px);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 .team-section{
     background-color: var(--filter-color);
 }
 .team{
-    background-color: var(--btnlet-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1*var(--card-set-gap));
+    margin-top: calc(-1*var(--card-set-gap));
 }
-.team{
+.item-team{
+    background-color: var(--btnlet-color);
+    outline: 1px solid teal;
+    flex-basis: calc(100%/4-30px);
     font-size: 16px;
     line-height: calc(19/16);
     text-align: center;
     letter-spacing: 0.03em;
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 .but, .buttonall{
     font-family: inherit;
@@ -159,12 +202,29 @@ html{
     color: var(--h-color);
     background-color: var(--filter-color);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--btn-radius);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
 }
 .projects{
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.projects>.item{
+    outline: 1px solid teal;
+    flex-basis: calc(100%/3-30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    border-bottom: 1px solid var(--border-card-projects);
 }
 .buttonall{
     background-color: var(--btnbg-color);
