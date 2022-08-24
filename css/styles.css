@@ -45,6 +45,10 @@ img{
     max-width: 100%;
     height: auto;
 }
+.hat, .soluton, .team-section, .section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .container{
     width: 1220px;
     margin-left: auto;
@@ -78,7 +82,7 @@ img{
     color: var(--h-color);
     display: flex;
     outline: 1px solid blue;
-    
+
 }
 .site-nav .link.current{
     color: var(--btnbg-color);
