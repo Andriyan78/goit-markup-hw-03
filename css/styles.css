@@ -253,7 +253,7 @@ img{
     justify-content: center;
     align-items: center;
 }
-.buttons>.item{
+.buttons .item{
     margin-right: 8px;
 }
 .buttons .item:last-child{
