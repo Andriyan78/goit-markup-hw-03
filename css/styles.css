@@ -39,15 +39,18 @@
 }
 h1,h2,h3,p,ul{
     margin: 0;
+    padding: 0;
 }
 img{
     display: block;
     max-width: 100%;
     height: auto;
+    
 }
-.hat, .solutons, .team-section, .section{
+.hat, .team-section, .header, .section{
     padding-top: 94px;
     padding-bottom: 94px;
+    width: 1600px;
     outline: 2px solid tomato;
 }
 .container{
@@ -87,7 +90,6 @@ img{
     color: var(--h-color);
     display: flex;
     margin-left: 93px;
-    outline: 1px solid blue;
 }
 .cont{
     margin-left: 70px;
@@ -100,7 +102,7 @@ img{
     gap: 50px;
     /* margin-left: 340px; */
     margin-left: auto;
-    outline: 1px solid blue;
+    
 }
 .site-nav .link.current{
     color: var(--btnbg-color);
@@ -138,7 +140,8 @@ img{
     font-size: 44px;
     line-height: calc(60/40);
     color: var(--btnlet-color);
-    
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
 }
 .request{
@@ -173,7 +176,7 @@ img{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--h-color);
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 .title-project{
     font-weight: 700;
@@ -189,30 +192,17 @@ img{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    /* margin-left: calc(-1*var(--card-set-gap));
-    margin-top: calc(-1*var(--card-set-gap)); */
 }
 .features .item{
     outline: 1px solid teal;
     width: 270px;
-    /* flex-basis: calc(100%/4-30px);
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap); */
 }
 .do{
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    /* margin-left: calc(-1*var(--card-set-gap));
-    margin-top: calc(-1*var(--card-set-gap)); */
+    justify-content: space-between;
+    gap: 30px;    
 }
-.do .item{
-    outline: 1px solid teal;
-    width: 370px;
-    /* flex-basis: calc(100%/3-30px);
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap); */
-}
+
 .team-section{
     background-color: var(--filter-color);
 }
@@ -232,8 +222,17 @@ img{
     text-align: center;
     letter-spacing: 0.03em;
     width: 270px;
-    /* margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap); */
+   
+}
+.card-foot{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.port-card-foot{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 .but, .buttonall{
     font-family: inherit;
@@ -270,7 +269,6 @@ img{
     margin-top: -30px;
 }
 .projects .item{
-    outline: 1px solid teal;
     width: 370px;
     flex-basis: calc(100%/3-30px);
     margin-left: 30px;
