@@ -29,7 +29,8 @@
 
 /* reset */
 .link {
-   text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
     color: currentColor;
 }
 .list{
@@ -41,24 +42,35 @@ h1,h2,h3,p,ul{
     margin: 0;
     padding: 0;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 img{
     display: block;
     max-width: 100%;
-    height: auto;
-    
+    height: auto;  
 }
-.hat, .team-section, .header, .section, .foot{
+.team-section, .section, .foot{
     padding-top: 94px;
     padding-bottom: 94px;
-    width: 1600px;
-    outline: 2px solid tomato;
+}
+.do-section{
+    padding-bottom: 94px;
 }
 .container{
-    width: 1220px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
-    outline: 2px solid rgb(61, 31, 26);
+    padding: 0 15px;
 }
 .webstudio{
     color: var(--btnbg-color);
@@ -66,7 +78,10 @@ img{
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    margin-bottom: 9px;
+}
+.area-link .webstudio{
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .accent{
     color: var(--h-color)
@@ -82,7 +97,9 @@ img{
     display: flex;
     align-items: center;
 }
-
+.nav{
+    margin-left: 93px;
+}
 .site-nav{
     font-weight: 500;
     font-size: 14px;
@@ -90,7 +107,7 @@ img{
     letter-spacing: 0.02em;
     color: var(--h-color);
     display: flex;
-    margin-left: 93px;
+    align-items: center;    
 }
 .cont{
     margin-left: 70px;
@@ -101,6 +118,7 @@ img{
 .contacts{
     display: flex;
     gap: 50px;
+    align-items: center;
     /* margin-left: 340px; */
     margin-left: auto;
     
@@ -126,7 +144,7 @@ img{
 .header{
     border-bottom: 1px solid var(--border-header);
 }
-.header .link{
+.area-link .link{
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -134,6 +152,8 @@ img{
     background-color: var(--footbcg-color);
     text-align: center;
     width: 1600px;    
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hat-title {
     width: 696px;
@@ -149,8 +169,7 @@ img{
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
-    line-height: calc(30/16);
-    
+    line-height: calc(30/16);    
     background-color: var(--btnbg-color);
     color: var(--btnlet-color);
     cursor: pointer;
@@ -159,6 +178,7 @@ img{
     min-height: 30px;
     /* width: 160px; */
     border-radius: var(--btn-radius);
+    border: none;
 }
 .title, .title-features {
     font-weight: 700;
@@ -166,6 +186,7 @@ img{
     line-height: calc(16/14) ;
     letter-spacing: 0.03em;
     color: var(--h-color);
+    margin-bottom: 10px;
 }
 .title-features, .hat-title{
     text-transform: uppercase;
@@ -185,6 +206,7 @@ img{
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--h-color);
+    margin-bottom: 4px;
 }
 .features{
     font-size: 14px;
@@ -195,15 +217,12 @@ img{
     gap: 30px;
 }
 .features .item{
-    outline: 1px solid teal;
     width: 270px;
 }
 .do{
     display: flex;
-    justify-content: space-between;
     gap: 30px;    
 }
-
 .team-section{
     background-color: var(--filter-color);
 }
@@ -211,7 +230,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-       padding: 0  ;
+    padding: 0  ;
     /* margin-left: calc(-1*var(--card-set-gap));
     margin-top: calc(-1*var(--card-set-gap)); */
 }
@@ -222,12 +241,10 @@ img{
     line-height: calc(19/16);
     text-align: center;
     letter-spacing: 0.03em;
-    width: 270px;
-   
+    width: 270px;   
 }
 .card-foot{
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 30px;
 }
 .port-card-foot{
     padding-top: 20px;
@@ -247,14 +264,15 @@ img{
     border: none;
     border-radius: var(--btn-radius);
 }
-
 .buttons{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 .buttons .item{
     margin-right: 8px;
+    padding: 6px 22px;
 }
 .buttons .item:last-child{
     margin-right: 0px;
@@ -270,15 +288,17 @@ img{
 }
 .projects .item{
     width: 370px;
-    flex-basis: calc(100%/3-30px);
+    flex-basis: calc(100%/3 - 30px);
     margin-left: 30px;
     margin-top: 30px;
+    border-left: 1px solid var(--border-card-projects);
+    border-right: 1px solid var(--border-card-projects);
     border-bottom: 1px solid var(--border-card-projects);
 }
 .buttonall{
     background-color: var(--btnbg-color);
-        color: var(--btnlet-color);
-        cursor: pointer;
+    color: var(--btnlet-color);
+    cursor: pointer;
 }
 .but:hover,
 .but:focus {
@@ -296,6 +316,8 @@ img{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--btnlet-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .contactmail,
 .contacttel {
@@ -304,6 +326,9 @@ img{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+}
+.contactmail{
+    margin-bottom: 10px;
 }
 .cityaddr:hover,
 .cityaddr:focus{
