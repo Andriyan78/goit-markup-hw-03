@@ -47,7 +47,7 @@ img{
     height: auto;
     
 }
-.hat, .team-section, .header, .section{
+.hat, .team-section, .header, .section, .foot{
     padding-top: 94px;
     padding-bottom: 94px;
     width: 1600px;
@@ -66,6 +66,7 @@ img{
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    margin-bottom: 9px;
 }
 .accent{
     color: var(--h-color)
@@ -251,7 +252,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
 .buttons>.item{
     margin-right: 8px;
