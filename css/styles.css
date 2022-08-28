@@ -191,6 +191,9 @@ img{
     color: var(--h-color);
     margin-bottom: 10px;
 }
+.title{
+    font-size: 16px;
+}
 .title-features, .hat-title{
     text-transform: uppercase;
 }
